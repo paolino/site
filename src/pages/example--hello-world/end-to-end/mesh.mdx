@@ -234,6 +234,8 @@ import { Asset, deserializeAddress, mConStr0 } from "@meshsdk/core";
 import { getScript, getTxBuilder, wallet } from "./common";
 
 async function main() {
+  // initialize the wallet
+  await wallet.init();
   // these are the assets we want to lock into the contract
   const assets: Asset[] = [
     {
