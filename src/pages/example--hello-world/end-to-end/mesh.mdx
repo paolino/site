@@ -44,6 +44,8 @@ async function main() {
       bech32: secret_key,
     },
   });
+  // initialize the wallet
+  await wallet.init();
 
   fs.writeFileSync("me.addr", (await wallet.getUnusedAddresses())[0]);
 }
